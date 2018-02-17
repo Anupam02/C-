@@ -1,0 +1,28 @@
+#include<iostream>
+#include<vector>
+#include<algorithm>
+using namespace std;
+
+// Helpher function 1
+void printx2(int a) {
+  cout<< a*2 << " ";
+  if ( a % 2 == 0) {
+    throw a;
+  }
+}
+
+// Helper function 2
+// object type function
+struct Class2 {
+  void operator() (int a) {
+    cout<< a*3<<" ";
+    if ( a % 2 == 0 ) {
+      throw a;
+    }
+  }
+} ob1;
+
+int main() {
+  // Initialize arrayj
+  
+

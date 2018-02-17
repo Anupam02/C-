@@ -1,0 +1,7 @@
+// 2018-02-17 17:52:34
+#include <iostream>
+
+using namespace std;
+long long int A[10000000002] = {0};
+int main() {
+  

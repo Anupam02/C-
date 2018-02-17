@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+double power(double a, int n) {
+  double ret = 1;
+  while (n) {
+    if ( n%2 == 1) ret *= a;
+    a *= a; 
+    n /= 2;
+  }
+  return ret;
+}
+
+double pow(double a, int n) {
+  if ( n == 0 ) return 1;
+  if ( n == 1 ) return a;
+  double ret = pow(a,n/2);
+  return ret*ret*pow(a,n%2);
+}
+
+int main() {
+  cout<<power(4,4)<<endl;
+  cout<<pow(3,3)<<endl;
+  cout<<pow(3,4)<<endl;
+  return 0;
+}

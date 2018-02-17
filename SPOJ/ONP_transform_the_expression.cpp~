@@ -1,0 +1,32 @@
+
+#include <iostream>
+#include <ctype>
+#include <stack>
+using namespace std;
+
+bool isOperator(char c)
+{
+    if ( c == '+' || c == '-' || c == '*' || c == '/' || c == '%' || c == '^' )  {
+        return true;
+    }
+    return false;
+}
+
+int main(int argc, char* argv[])
+{
+    int t;
+    string expression;
+    string::iterator it;
+    cin>>t;
+    stack<char> par;
+    while (t--) {
+        cin>>expression;
+        for (it = expression.begin(); it != expression.end(); it++)
+        {
+            if (*it == '(')
+            par.push(*it);
+            else if ((*it).isd)
+        }
+    }
+    return 0;
+}

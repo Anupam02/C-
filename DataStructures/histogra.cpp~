@@ -1,0 +1,36 @@
+// 2018-02-17 12:40:16
+
+#include <iostream>
+#include <vector>
+#include <iterator>
+
+using namespace std;
+
+int main() {
+  int n,input,min,max,temp;
+  vector<int> hist;
+  cin>>n;
+  vector<int>::iterator it1, it2;
+  for(int i = 0; i < n; i++) {
+    cin>>input;
+    hist.push_back(input);
+  }
+  max = 1;
+  for(it1 = hist.begin(); it1 != hist.end()-1 ; it1++) {
+    min = *it1;
+    for(it2 = it1+1; it2 != hist.end() ; it2++) {
+      min = min < *it2 ? min : *it2 ;
+      // cout<<*it1<<" "<<*it2<<" "<<min<<" "<<endl;
+      // cout<<min<<" "<<(it2-it1)<<" "<<sizeof(it1)<<endl;
+      // cout<<min*(it2-it1+1)<<endl;
+      temp = min*(it2-it1+1);
+      max = temp > max ? temp : max;
+      }
+  }
+  cout<<max<<endl;
+  // for(it1 = hist.begin(); it1 != hist.end(); it1++) {
+  //   cout<<*it1<<" ";
+  // }
+  // cout<<endl;
+  return 0;
+}
